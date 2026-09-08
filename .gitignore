@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+work/
+test-results/
+*.log
+*.log.*
+.env
+.env.*
+.venv/
+.agents/
+.claude/
+node_modules/
+skills-lock.json
+dist/
