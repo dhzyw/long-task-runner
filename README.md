@@ -40,6 +40,14 @@ python scripts/runner.py wait --job ./work/demo/job --seconds 25
 
 The generated spec uses real absolute paths to your interpreter and the demo script. It performs no network or model calls. A successful result requires both exit code 0 and the expected JSON content.
 
+## Fresh chats and reusable experience
+
+After a complete task has been delivered, independent new work in the same conversation gets one reminder: start a fresh chat with a compact handoff, and optionally create or update a reusable skill from the proven workflow. Revisions of the same artifact, retries, and unfinished batch steps continue without a reminder.
+
+The handoff carries verified methods, script locations, applicable preferences, and validation criteria. It does not copy the conversation history. Opening a chat and creating a skill are independent, opt-in choices; without a thread-creation tool, the assistant supplies a copyable starting prompt.
+
+This is assistant guidance when the skill is selected, not a global chat listener or a promise of measured token savings. See the [handoff guide](references/task-handoff.md) and [compact template](assets/task-handoff-template.md).
+
 ## Interfaces
 
 All commands take `--job <job-directory>`.

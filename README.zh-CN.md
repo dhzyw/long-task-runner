@@ -30,6 +30,14 @@ python scripts/runner.py start --spec ./work/demo/demo.json --job ./work/demo/jo
 python scripts/runner.py wait --job ./work/demo/job --seconds 25
 ```
 
+## 新任务提醒与经验接续
+
+完成上一项工作后，如果在同一对话开始独立新任务，技能会提醒一次：是否新开对话以减少旧上下文，以及是否把成功流程制作或更新为可复用技能。返修同一作品、失败重试和未完成批次不会触发；选择继续原对话后不会为同一任务重复提醒。
+
+新对话携带精简交接摘要：已验证做法、脚本位置、用户偏好和验收标准；不复制整个聊天历史。用户确认后才新建对话或制作技能，没有新建工具时提供可复制的开场提示。两项选择互相独立。
+
+这是技能被选用后的助手行为，不是全局对话监听器，不保证所有聊天自动触发，也不承诺具体 token 节省比例。详见[任务切换指引](references/task-handoff.md)与[交接模板](assets/task-handoff-template.md)。
+
 ## 有用的接口
 
 每个命令都指定 `--job <独立作业目录>`。
